@@ -1,0 +1,16 @@
+                <xa-datasource jndi-name="java:/jdbc/Schedule_ex" pool-name="44FZSchedule_ex" enabled="true" use-java-context="true" statistics-enabled="true">
+                    <xa-datasource-property name="URL">${SCHEDULER_DB_URL}</xa-datasource-property>
+                    <driver>oracle</driver>
+                    <xa-pool>
+                        <min-pool-size>10</min-pool-size>
+                        <max-pool-size>50</max-pool-size>
+                        <prefill>true</prefill>
+                    </xa-pool>
+                    <security>
+                        <user-name>FKS_SCHEDULER</user-name>
+                        <password>FKS_SCHEDULER</password>
+                    </security>
+                    <validation>
+                        <check-valid-connection-sql>SELECT 1 FROM DUAL</check-valid-connection-sql>
+                    </validation>
+                </xa-datasource>
